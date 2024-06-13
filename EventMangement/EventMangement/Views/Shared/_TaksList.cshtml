@@ -1,0 +1,95 @@
+﻿@model Model.EventModel
+@{
+    Layout = "";
+}
+<h3>Task</h3>
+<script type="text/javascript">
+    function GetList() {
+        debugger;
+        $.ajax({
+            url: "/Index/TaksList",
+            method: "GET",        
+            success: function (data) {
+                debugger;
+                RenderList(data.TaskGetList);
+                debugger;
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
+    function RenderList(list) {
+        console.log(list);
+        debugger;
+        var tableBody = $('#tblTaksList');
+        tableBody.empty();
+        if (list.length != 0) {
+            $.each(list, function (index, item) {
+                var row = '<tr align="center" style="border: 1px solid #807d78;">' +
+                    '<td scope="col" style="border: 1px solid #807d78;">' + item.TaskId + '</td>' +
+                    '<td scope="col" style="border: 1px solid #807d78;">' + item.TaskName + '</td>' + 
+                    '<td scope="col" style="border: 1px solid #807d78;">' +
+                    '<button type="button" id="SelectTaskBtn" class="btn btn-info"> Select</button>' +
+                    '</td>' +
+                    '</tr>';  
+                tableBody.append(row);
+            });
+        } else {
+            var row = '<tr><td colspan="8" class="text-center text-danger font-weight-bold h3" style="vertical-align:middle;" scope="row">No Records Found</td></tr>';
+            tableBody.append(row);
+        }
+    }
+    GetList();
+    debugger;
+</script>
+
+
+
+
+
+
+<div class="container">
+    <div class="d-flex">
+        <input list="OtherList" id="OtherTaskName" style="margin-right: 1rem;" placeholder="Enter task name...">
+        <datalist id="OtherList">
+           
+            @foreach (var item in Model.TaskOtherGetList)
+            {
+                <option  value=@item.TaskName data-taskid="@item.TaskId"></option>
+            }          
+
+        </datalist>
+        
+        <div>
+            <button class="btn btn-primary" id="AddOtherTaskBtn"> Add Task</button>
+        </div>
+    </div>
+    <div style="margin-top:2rem">
+    <table style="border-color: #807d78;  border-width: 1px; align-content: center;" class="table table-hover table-borde#807d78">
+        <thead align="center" bgcolor="#dc3545">
+            <tr>
+
+                <td align="center">
+                    <b>
+                      Task Id
+
+                    </b>
+                </td>
+                <td align="center">
+                    <b>
+                       Task Name
+
+                    </b>
+                </td> 
+                <td>
+                    <b>Action</b>
+                </td>
+            </tr>
+        </thead>
+        <tbody id="tblTaksList"></tbody>
+    </table>  
+    </div>
+</div>
+

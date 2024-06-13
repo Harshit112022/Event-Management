@@ -1,0 +1,82 @@
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\csc.exe
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\System.Collections.Immutable.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\System.Reflection.Metadata.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\vbc.exe
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\VBCSCompiler.exe
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\roslyn\VBCSCompiler.exe.config
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\EventMangement.dll.config
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\EventMangement.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\EventMangement.pdb
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.Web.Infrastructure.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Model.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Helpers.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Mvc.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Razor.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Webpages.Deployment.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Webpages.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Webpages.Razor.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Model.pdb
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Razor.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Webpages.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Webpages.Deployment.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Webpages.Razor.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Helpers.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\System.Web.Mvc.xml
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\obj\Debug\EventMangement.csprojResolveAssemblyReference.cache
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\obj\Debug\EventMangement.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\obj\Debug\EventMangement.pdb
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\DAL.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\EventMangement\bin\DAL.pdb
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\csc.exe
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\System.Collections.Immutable.dll
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\vbc.exe
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\VBCSCompiler.exe
+D:\Event-Management\EventMangement\EventMangement\bin\roslyn\VBCSCompiler.exe.config
+D:\Event-Management\EventMangement\EventMangement\bin\EventMangement.dll.config
+D:\Event-Management\EventMangement\EventMangement\bin\EventMangement.dll
+D:\Event-Management\EventMangement\EventMangement\bin\EventMangement.pdb
+D:\Event-Management\EventMangement\EventMangement\bin\DAL.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.Practices.ObjectBuilder2.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.Web.Infrastructure.dll
+D:\Event-Management\EventMangement\EventMangement\bin\Model.dll
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Helpers.dll
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Mvc.dll
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Razor.dll
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Webpages.Deployment.dll
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Webpages.dll
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Webpages.Razor.dll
+D:\Event-Management\EventMangement\EventMangement\bin\DAL.pdb
+D:\Event-Management\EventMangement\EventMangement\bin\Model.pdb
+D:\Event-Management\EventMangement\EventMangement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Razor.xml
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Webpages.xml
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Webpages.Deployment.xml
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Webpages.Razor.xml
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Helpers.xml
+D:\Event-Management\EventMangement\EventMangement\bin\System.Web.Mvc.xml
+D:\Event-Management\EventMangement\EventMangement\obj\Debug\EventMangement.csprojResolveAssemblyReference.cache
+D:\Event-Management\EventMangement\EventMangement\obj\Debug\EventMangement.dll
+D:\Event-Management\EventMangement\EventMangement\obj\Debug\EventMangement.pdb

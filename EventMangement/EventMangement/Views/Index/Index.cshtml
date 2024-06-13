@@ -1,0 +1,244 @@
+﻿@model Model.EventModel
+@{
+   
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.7.1.js"></script>
+<h2>Event Management</h2>
+        <form id="formId">
+<div class="container">
+    <div class="d-flex flex-wrap justify-content-between">
+
+        <div>
+            <label class="font-weight-bold">Enter Event Name</label>
+            @Html.TextBoxFor(m => m.EventName, new { @class = "form-control", placeholder = "Event Name" })
+        </div>
+        <div>
+            <label class="font-weight-bold">Select Event Location</label>
+            @Html.DropDownListFor(m => m.EventLocationId, new SelectList(Model.EventLocationsGetList, "EventLocationId", "EventLocation"), "Select Event Location", new { @class = "form-control form-select" })
+        </div>
+        <div >
+            <label class="font-weight-bold">Select Event Type</label>
+            @Html.DropDownListFor(m => m.EventTypeId, new SelectList(Model.EventTypesGetList, "EventTypeId", "EventType"), "Select Event Type", new { @class = "form-control form-select" })
+        </div>
+        <div >
+            <label class="font-weight-bold">Event Date</label><br />
+            @Html.TextBoxFor(m => m.EventDate, new { @class = "form-control", @type = "date" })
+        </div>
+        <div>
+            <label class="font-weight-bold">Event Time</label><br />
+            @Html.TextBoxFor(m => m.EventTime, new { @class = "form-control", @type = "time" })
+        </div>
+        <div>
+            <label class="font-weight-bold">&nbsp;</label><br />
+            <button class="btn btn-danger" id="SelectBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Select Task</button>
+        </div>
+    </div>
+</div>
+        </form>
+
+
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">             
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBodyContent">
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <table style="border-color: #807d78;  border-width: 1px; align-content: center;" class="table table-hover table-borde#807d78 mt-4 table" id="tableId">
+        <thead>
+            <tr align="center" bgcolor="#dc3545">
+                <td class="text-center" style="vertical-align:middle; font-weight: bold;" scope="col">Task Id</td>
+                <td class="text-center" style="vertical-align:middle;font-weight: bold;" scope="col">Task Name</td>
+                 <td class="text-center" style="vertical-align:middle;font-weight: bold;" scope="col">Action</td>
+            </tr>
+        </thead>
+        <tbody id="tablebodyId"></tbody>
+    </table>
+</div>
+<div class="container" style="align-content:center;display: flex;align-items: center;justify-content: center;">
+    <button id="savebtn" class="btn btn-primary">Save Event Task </button>
+</div>
+<script type="text/javascript">
+
+    $(document).on('click', '#savebtn', function (event) {
+        debugger;
+      
+        var TaskListArray = [];
+        $('#tableId').find('tbody > tr ').each(function (Index) {
+            TaskListArray[Index] = {
+            TaskId: $(this).find('td').eq(0).text()
+            }
+        });
+        console.log(TaskListArray);
+        var obj = {
+            EventName : $('#EventName').val(),
+            EventLocationId : $('#EventLocationId').val(), 
+            EventTypeId: $('#EventTypeId').val(),
+            EventDate: $('#EventDate').val(),
+            EventTime: $('#EventTime').val(), 
+            TaskList: TaskListArray
+        }
+        console.log(obj);
+        debugger;
+        $.ajax({
+            url: "/Index/EventTaskInsert",
+            method: "POST",
+            data: obj,
+            success: function (response) {
+                if (response) {                 
+                    alert("Data is  inserted");
+                    window.location.href='/Index/Index'
+                    debugger;
+                }
+                else {
+                    alert("Data is NOT inserted");
+                    debugger;
+                }
+            },
+            error: function (error) {
+
+                console.error(error);
+            }
+        });
+
+    });
+
+    var tableBody = $('#tablebodyId');
+
+    $(document).on('click', '#SelectBtn', function (event) {
+        event.preventDefault();
+        debugger
+        $.ajax({
+            url: "/Index/TaksListView",
+            method: "GET",
+            success: function (response) {
+                $('#modalBodyContent').html(response);
+                $('#exampleModal').modal('show');
+                debugger;
+            },
+            error: function (status, error) {
+                debugger
+                console.log(error);
+
+            }
+        });
+    })
+
+    $(document).on('click', '#AddOtherTaskBtn', function (event) {
+      
+        debugger;
+        var otherTaskName = $('#OtherTaskName').val();
+        if (otherTaskName != "")
+        {
+            var selectedOption = $('#OtherList option[value="' + otherTaskName + '"]');
+
+
+            var otherTaskId = selectedOption.data('taskid');
+            debugger
+            if (otherTaskId != null) {
+                console.log('Selected Other Task ID:', otherTaskId);
+
+                var TaskExists = tableBody.find('td').filter(function () { return $(this).text() == otherTaskId }).length > 0;
+                if (TaskExists) {
+                    alert('This Task is allready selected .');
+                }
+                else {
+                    AppendRows(otherTaskId, otherTaskName);
+                }
+
+            }
+            else {
+                debugger;
+                var obj = {
+                    TaskName: otherTaskName
+                }
+                $.ajax({
+                    url: "/Index/Insert",
+                    method: "GET",
+                    data: obj,
+                    success: function (response) {
+
+                        otherTaskId = response;
+                        debugger;
+                        AppendRows(otherTaskId, otherTaskName);
+                        debugger;
+                    },
+                    error: function (status, error) {
+                        debugger
+                        console.log(error);
+
+                    }
+                });
+
+            }
+
+        }
+        else {
+            
+            debugger;
+            alert('Enter Valid Value');
+        }
+      
+         
+            
+       
+    });
+    function AppendRows(TaskId, TaskName)
+    {
+       
+        var newRow = '<tr class="bg-white">' +
+                            '<td class="text-center" style="vertical-align:middle; " scope="col">' + TaskId + '</td>' +
+                            '<td class="text-center" style="vertical-align:middle;" scope="col">' + TaskName + '</td>' +
+                            '<td class="text-center" style="vertical-align:middle;" scope="col"><button type="button" id="removetBtn" class="text-center btn btn-danger" style="vertical-align:middle;"> Remove </button></td>' +
+                        '</tr>';
+        tableBody.append(newRow);
+    }
+
+    $(document).on('click', '#SelectTaskBtn', function (event) {
+        var row = $(this).closest('tr');
+        var TaskId = row.find('td').eq(0).text();
+        var TaskName = row.find('td').eq(1).text();
+        var tableBody = $('#tablebodyId');
+        var TaskExists = tableBody.find('td').filter(function () { return $(this).text() == TaskId; }).length > 0;
+       if (TaskExists) {
+           alert('This Task is allready selected .');
+     }
+      else {
+           AppendRows(TaskId, TaskName, tableBody);
+        }
+     
+    });
+
+    $(document).ready(function () {    
+        $('#tablebodyId').on('click', '#removetBtn', function () {
+            debugger;       
+            $(this).closest('tr').remove();
+        })
+
+    });
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\DAL.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\DAL.pdb
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\Model.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\bin\Debug\Model.pdb
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\obj\Debug\DAL.dll
+D:\EVENT MANAGEMENT SYSTEM\EventMangement\DAL\obj\Debug\DAL.pdb
